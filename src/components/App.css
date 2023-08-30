@@ -1,0 +1,24 @@
+.button {
+  display: block;
+  border: none;
+  /* background-color: white; */
+  padding: 5px;
+  margin: 10px;
+  color: brown;
+
+  ::hover {
+    cursor: pointer;
+    color: red;
+  }
+}
+
+.button :hover {
+  background-color: red;
+  cursor: pointer;
+}
+.headerContainer {
+  display: flex;
+  ::hover {
+    background-color: red;
+  }
+}
