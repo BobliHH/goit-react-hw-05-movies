@@ -1,5 +1,5 @@
-import react, { useEffect, useState } from 'react';
-import { fetchTrendingMovies } from '../components/FetchApi/FetchApi';
+import React, { useEffect, useState } from 'react';
+import { fetchTrendingMovies } from 'components/FetchApi/FetchApi';
 import MovieList from 'components/MovieList/MovieList';
 
 const Home = () => {
@@ -7,17 +7,17 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const movies = await fetchTrendingMovies(); // Call the fetchTrendingMovies function
-        setTrendingMovies(movies); // Update the trendingMovies state with the fetched movies
+        const movies = await fetchTrendingMovies();
+        setTrendingMovies(movies);
       } catch (error) {
         console.error(error);
       }
     };
-    fetchData(); // Call the fetchData function to fetch the trending movies
+    fetchData();
   }, []);
 
   return (
-    <div className="container">
+    <div className="Container">
       <h1>Trending today</h1>
       <div>
         {trendingMovies.length === 0 ? (
