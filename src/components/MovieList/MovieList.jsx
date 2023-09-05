@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './MovieList.css';
 
 const MovieList = ({ films }) => {
+
   const location = useLocation();
 
   return (
@@ -22,6 +23,7 @@ const MovieList = ({ films }) => {
     </ul>
   );
 };
+
 
 MovieList.propTypes = {
   films: PropTypes.arrayOf(

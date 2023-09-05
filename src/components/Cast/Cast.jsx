@@ -8,7 +8,6 @@ const Cast = () => {
   const [cast, setCast] = useState([]);
 
   useEffect(() => {
-
     const movieCast = async () => {
       try {
         const response = await fetchMovieCast(movieId);
@@ -20,7 +19,7 @@ const Cast = () => {
 
     movieCast();
   }, [movieId]);
-
+    
   return (
     <>
       {cast.length !== 0 && (

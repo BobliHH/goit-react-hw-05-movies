@@ -3,6 +3,7 @@ import { Vortex } from 'react-loader-spinner';
 import './Loader.css';
 
 export const Loader = () => {
+  
   return (
     <div className="loadContainer">
       <Vortex

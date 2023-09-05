@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 import { fetchMovieReviews } from 'components/FetchApi/FetchApi';
 
 const Reviews = () => {
+
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
 
-  useEffect(() => {
-    // Отримання оглядів фільму з API
+    useEffect(() => {
+      
     const movieReviews = async () => {
       try {
         const response = await fetchMovieReviews(movieId);

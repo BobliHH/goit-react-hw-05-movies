@@ -37,7 +37,7 @@ const Movies = () => {
         {loading ? (
           <p>Loading....</p>
         ) : searchResults.length === 0 && movieName ? (
-          <h2>🔎 Nothing found</h2>
+          <h2> Nothing found</h2>
         ) : (
           <MovieList films={searchResults} />
         )}
