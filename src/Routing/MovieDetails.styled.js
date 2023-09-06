@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 export const Container = styled.div`
   display: flex;
@@ -35,3 +36,7 @@ export const ProdCompany = styled.div`
   list-style: none;
   margin-top: 10px;
 `;
+
+Container.propTypes = {
+  backdrop: propTypes.string,
+};

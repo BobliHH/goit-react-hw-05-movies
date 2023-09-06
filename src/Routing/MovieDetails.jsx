@@ -60,7 +60,7 @@ const MovieDetails = () => {
   return (
     <div>
       <Link to={backLinkHref.current}>
-        <Button text="Go back" />
+        <Button text="Back" />
       </Link>
       <Container backdrop={movieDetails.backdrop_path}>
         <Description>
