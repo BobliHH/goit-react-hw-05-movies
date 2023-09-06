@@ -15,7 +15,6 @@ const Home = () => {
     };
     fetchData();
   }, []);
-
   return (
     <div className="Container">
       <h1>Trending today</h1>

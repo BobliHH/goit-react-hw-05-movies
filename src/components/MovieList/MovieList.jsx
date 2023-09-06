@@ -1,29 +1,28 @@
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './MovieList.css';
+import { Link } from 'react-router-dom';
 
 const MovieList = ({ films }) => {
-
   const location = useLocation();
 
   return (
     <ul className="List">
       {films.map(movie => (
         <li className="ListItem" key={movie.id}>
-          <link
+          <Link
             className="LinkDetails"
             to={`/movies/${movie.id}`}
             state={{ from: location }}
             cover={movie.poster_path}
           >
             <i className="LogoIcon " /> {movie.title}
-          </link>
+          </Link>
         </li>
       ))}
     </ul>
   );
 };
-
 
 MovieList.propTypes = {
   films: PropTypes.arrayOf(

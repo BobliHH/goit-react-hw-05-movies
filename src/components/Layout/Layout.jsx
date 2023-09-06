@@ -2,9 +2,9 @@ import './Layout.css';
 import { Loader } from '../Loader/Loader';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Layout = () => {
-    
   return (
     <>
       <div className="Container">
@@ -14,12 +14,12 @@ const Layout = () => {
             TMDB
           </p>
           <nav>
-            <link className="Links" to="/" end>
+            <NavLink className="Links" to="/" end>
               Home
-            </link>
-            <link className="Links" to="/movies">
+            </NavLink>
+            <NavLink className="Links" to="/movies">
               Movie
-            </link>
+            </NavLink>
           </nav>
         </header>
         <Suspense fallback={<Loader />}>
